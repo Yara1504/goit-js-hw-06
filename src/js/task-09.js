@@ -11,4 +11,4 @@ const background = document.querySelector('.color');
   const newColor = getRandomHexColor();
   document.body.style.backgroundColor = newColor;
    background.textContent = newColor;
-});
+ });
