@@ -5,10 +5,12 @@ inputString.addEventListener('blur', function () {
     const inputElement = inputString.value;
     const length = parseInt(lengthInput.getAttribute('data-length'));
 
+    inputString.classList.remove('valid');
+    inputString.classList.remove('invalid');
+
     if (inputElement.length === length) {
         inputString.classList.add('valid');
     } else {
-        inputString.classList.remove('valid');
         inputString.classList.add('invalid');
     }
 });

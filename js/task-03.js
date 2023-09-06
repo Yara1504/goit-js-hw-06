@@ -15,24 +15,22 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
+gallery.style.display = "flex"; 
+gallery.style.flexWrap = "wrap"; 
+gallery.style.listStyle = "none"; 
+
 function createGallery(image) {
-  const galleryItem = document.createElement("li");
-  const img = document.createElement("img");
-  img.src = `${image.url}`;
-  img.alt = `${image.alt}`;
-
-  galleryItem.append(img);
-
+  const galleryItem = `<li><img src="${image.url}" alt="${image.alt}"></li>`;
+  
   return galleryItem;
 }
 
 function addGallery() {
   const galleryItems = images.map(createGallery);
   
-  galleryItems.forEach((item) => {
-  gallery.insertAdjacentElement("beforeend", item);
+  galleryItems.forEach((html) => {
+  gallery.insertAdjacentHTML("beforeend", html);
   });
 }
   
 addGallery();
-  
