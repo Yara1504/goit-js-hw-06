@@ -3,8 +3,8 @@ const form = document.querySelector("#login-form");
 form.addEventListener("submit", (event) => {
     event.preventDefault(); 
 
-    const emailInput = document.querySelector('#email');
-    const passwordInput = document.querySelector('#password');
+    const emailInput = document.querySelector('input[name="email"]');
+    const passwordInput = document.querySelector('input[name="password"]');
 
     const emailValue = emailInput.value;
     const passwordValue = passwordInput.value;
@@ -18,9 +18,6 @@ form.addEventListener("submit", (event) => {
         };
 
         console.log(formInput);
-
-        form.reset();
     }
 });
-
 
